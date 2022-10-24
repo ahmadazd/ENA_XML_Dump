@@ -11,24 +11,28 @@ The tool only required the object or the project accession number and fetch the 
 
 The ERA database is an Oracle database. In order to query the db, this script uses the `cx_Oracle` python module, which requires a little setup.
 
-1. Install the module using:  pip install cx_Oracle
+ - Install the module using:  `pip install cx_Oracle`
 
- 2. The [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) is a requirement of this module. The ***‘Basic Light’*** package is sufficient for our needs.
+ - The [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) is a requirement of this module. The ***‘Basic Light’*** package is sufficient for our needs.
 
- 3. Once the instant client is downloaded, set the location of this library using the `$ORACLE_CLIENT_LIB` environment variable before using this script.
+ - Once the instant client is downloaded, set the location of this library using the `$ORACLE_CLIENT_LIB` environment variable before using this script.
  
  ***Setting up the Enviroment***
 	 `NO NEED FOR ROOT WORK`
-	 1. Unzip the `instantclient`
-	 2. Find the path for the unzipped `instantclient`  and save it
-	 3. Edit the `.bashrc` file to set oracle enviroment
-	 5. Add the following lines to the end of `.bashrc` file
-		 `export ORACLE_HOME=/path/to/oracle/instantclient`  
-		`export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH`  
-		`export PATH=$ORACLE_HOME:$PATH`  
-		`export ORACLE_CLIENT_LIB=$ORACLE_HOME`
-	6. `source` the `.bashrc` file 
-		`source $HOME/.bashrc`
+ - Unzip the `instantclient`
+ - Find the path for the unzipped `instantclient`  and save it
+ - Edit the `.bashrc` file to set oracle enviroment
+
+ 
+
+ - Add the following lines to the end of `.bashrc` file
+`export ORACLE_HOME=/path/to/oracle/instantclient`   
+`export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH` 		   		 	  `export PATH=$ORACLE_HOME:$PATH`   		
+`export ORACLE_CLIENT_LIB=$ORACLE_HOME`
+
+ - `source` the `.bashrc` file
+`source $HOME/.bashrc`
+
     
 For more details, see: [https://cx oracle.readthedocs.io/en/latest/user_guide/installation.html](https://cxoracle.readthedocs.io/en/latest/user_guide/installation.html)
 
