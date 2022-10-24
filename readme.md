@@ -26,9 +26,14 @@ The ERA database is an Oracle database. In order to query the db, this script us
  
 
  - Add the following lines to the end of `.bashrc` file
-`export ORACLE_HOME=/path/to/oracle/instantclient`   
-`export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH` 		   		 	  `export PATH=$ORACLE_HOME:$PATH`   		
-`export ORACLE_CLIENT_LIB=$ORACLE_HOME`
+	 - `export ORACLE_HOME=/path/to/oracle/instantclient`
+	 - `export LD_LIBRARY_PATH=$ORACLE_HOME:$LD_LIBRARY_PATH`	   		 	  
+
+	 - `export PATH=$ORACLE_HOME:$PATH`
+ 		
+
+	 - `export ORACLE_CLIENT_LIB=$ORACLE_HOME`
+ 
 
  - `source` the `.bashrc` file
 `source $HOME/.bashrc`
