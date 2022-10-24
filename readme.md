@@ -18,7 +18,7 @@ The ERA database is an Oracle database. In order to query the db, this script us
  - Once the instant client is downloaded, set the location of this library using the `$ORACLE_CLIENT_LIB` environment variable before using this script.
  
  ***Setting up the Enviroment***
-	 `NO NEED FOR ROOT WORK`
+	 `,NO NEED FOR ROOT WORK`
  - Unzip the `instantclient`
  - Find the path for the unzipped `instantclient`  and save it
  - Edit the `.bashrc` file to set oracle enviroment
@@ -62,14 +62,16 @@ For more details, see: [https://cx oracle.readthedocs.io/en/latest/user_guide/in
 	 
 	**Fetch XMLs using project accession**
  - Combining the project accession in `--accession/-c` flag with data type (`--type/-t`), you will be downloading all the data (specified in the data type flag) associated to the project.
- *Example:*
- ` python3 xml_dump.py -acc PRJEB## -t sample -c config.yaml -o path/to/output`
+ 
+ - *Example:*
+	 - ` python3 xml_dump.py -acc PRJEB## -t sample -c config.yaml -o
+   path/to/output`
  - To fetch all the data in a project, use the `--type/-t all` flag
- *Example:*
- ` python3 xml_dump.py -acc PRJEB## -t all -c config.yaml -o path/to/output`
+ 
+ - *Example:*
 
-
-
+	 - ` python3 xml_dump.py -acc PRJEB## -t all -c config.yaml -o
+   path/to/output`
 
 	
 	 
