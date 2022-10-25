@@ -36,6 +36,12 @@ parser.add_argument('-c', '--config', help='config file path', type=str, require
 parser.add_argument('-o', '--output', help='Output directory', type=str, required=True)
 args = parser.parse_args()
 
+# generate and create the output directory
+def create_outdir():
+    outdir = f"{args.output}"
+    if not os.path.exists(outdir):
+        os.mkdir(outdir)
+    return outdir
 
 """
 Setup the connection to ENAPRO and ERAPRO. 
@@ -93,8 +99,9 @@ def fetch_and_filter(connection, acc, database):
 
 
 def SQL_query(connection,accession, database):
+    outdir = create_outdir()
     c = connection.cursor()
-    with open(f"{args.output}/{database}_output.xml", "a") as f:
+    with open(f"{outdir}/{database}_output.xml", "a") as f:
         if fnmatch.fnmatch(accession, 'PRJ*') and not database == 'project':
             if database == 'sample' or database == 'all':
                 c.execute(
