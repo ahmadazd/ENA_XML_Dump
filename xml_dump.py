@@ -158,7 +158,7 @@ def SQL_query(connection,accession, database):
 
         else:
             c.execute(
-                f"select ({database}_xml).getClobVal() from {database} where {database}_id in ('{accession}') and status_id !=5 status_id !=3")
+                f"select ({database}_xml).getClobVal() from {database} where {database}_id in ('{accession}') and status_id and !=5 status_id !=3")
             for row in c:
                 f.write(str(row[0]) + "\n")
 
